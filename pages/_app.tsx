@@ -1,0 +1,32 @@
+import { useState, useEffect } from 'react';
+import type { AppProps } from 'next/app';
+import Header from '../src/components/Header';
+import '../src/index.css';
+
+function MyApp({ Component, pageProps }: AppProps) {
+  const [updatedAt, setUpdatedAt] = useState(new Date());
+
+  useEffect(() => {
+    const handleInteraction = () => {
+      setUpdatedAt(new Date());
+    };
+
+    window.addEventListener('click', handleInteraction);
+    return () => window.removeEventListener('click', handleInteraction);
+  }, []);
+
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+      <footer className="py-8 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 text-center text-gray-600 dark:text-gray-300">
+          <p>&copy; {new Date().getFullYear()} Sergio de la Rosa. Todos los derechos reservados.</p>
+          <p className="mt-2">Web actualizada: {updatedAt.toLocaleString()}</p>
+        </div>
+      </footer>
+    </>
+  );
+}
+
+export default MyApp;

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { Github, Linkedin, Twitter } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SocialLinks from './SocialLinks';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,25 +84,8 @@ export default function About() {
               Con años de experiencia en el desarrollo de soluciones de IA, me especializo en crear soluciones 
               innovadoras que ayudan a las empresas a optimizar sus procesos y mejorar su presencia digital.
             </p>
-            <div className="flex justify-center space-x-6">
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-violet-500 transition-colors transform hover:scale-110 duration-300"
-              >
-                <Twitter className="w-8 h-8" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-violet-500 transition-colors transform hover:scale-110 duration-300"
-              >
-                <Linkedin className="w-8 h-8" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-violet-500 transition-colors transform hover:scale-110 duration-300"
-              >
-                <Github className="w-8 h-8" />
-              </a>
+            <div className="flex justify-center">
+              <SocialLinks />
             </div>
           </div>
         </div>
