@@ -61,7 +61,7 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div ref={textRef} className="space-y-8">
             <h1 className="text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">
-              Expertos en Inteligencia Artificial
+              Especialistas en IA para Empresas
             </h1>
             <h2 className="text-xl text-gray-600 dark:text-gray-300">
               Desbloquea el potencial de tu empresa con soluciones innovadoras de IA. Automatización, 
@@ -86,9 +86,9 @@ export default function Hero() {
           <div ref={imageRef} className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 rounded-full blur-3xl" />
             <img 
-              src="/logo_full.png" 
+              src="https://eu2.contabostorage.com/58a0e4fa2cfc4610a684c56ae55223bf:inteligencia-artificial/5841395010392672217.jpg" 
               alt="Sergio de la Rosa - Experto en IA" 
-              className="w-full h-auto relative z-10 transform hover:scale-105 transition-transform duration-500"
+              className="w-full h-[500px] object-cover relative z-10 transform hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>

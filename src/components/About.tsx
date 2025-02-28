@@ -69,7 +69,7 @@ export default function About() {
             <div ref={imageRef} className="mb-8 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 rounded-full blur-3xl" />
               <img
-                src="/sergio-profile.jpg"
+                src="https://eu2.contabostorage.com/58a0e4fa2cfc4610a684c56ae55223bf:inteligencia-artificial/avatar.jpeg"
                 alt="Sergio de la Rosa"
                 className="w-48 h-48 rounded-full object-cover mx-auto hover:scale-105 transition-transform duration-500 shadow-2xl relative z-10"
               />
