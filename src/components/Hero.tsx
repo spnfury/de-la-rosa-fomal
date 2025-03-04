@@ -61,7 +61,7 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div ref={textRef} className="space-y-8">
             <h1 className="text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">
-              Especialistas en IA para Empresas
+              Consultor de inteligencia artificial para empresas
             </h1>
             <h2 className="text-xl text-gray-600 dark:text-gray-300">
               Desbloquea el potencial de tu empresa con soluciones innovadoras de IA. Automatización, 
