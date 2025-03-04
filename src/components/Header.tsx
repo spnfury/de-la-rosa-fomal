@@ -37,8 +37,7 @@ export default function Header() {
             {[
               ['Inicio', 'home'],
               ['Servicios', 'services'],
-              ['Sobre Mí', 'about'],
-              ['Contacto', 'contact']
+              ['Sobre Mí', 'about']
             ].map(([label, id]) => (
               <a
                 key={id}
@@ -73,8 +72,7 @@ export default function Header() {
             {[
               ['Inicio', 'home'],
               ['Servicios', 'services'],
-              ['Sobre Mí', 'about'],
-              ['Contacto', 'contact']
+              ['Sobre Mí', 'about']
             ].map(([label, id]) => (
               <a
                 key={id}
