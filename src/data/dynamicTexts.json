@@ -1,0 +1,39 @@
+{
+  "home": {
+    "title": "Sergio de la Rosa | Inicio",
+    "description": "Bienvenido a la web de Sergio de la Rosa, experto en soluciones IA para empresas.",
+    "content": "Descubre cómo la inteligencia artificial puede transformar tu negocio con soluciones innovadoras."
+  },
+  "servicios": {
+    "automatizaciones": {
+      "title": "Automatizaciones con Make",
+      "description": "Optimiza tus procesos empresariales con automatizaciones inteligentes.",
+      "content": "Implementamos soluciones de automatización personalizadas utilizando Make para conectar tus aplicaciones, ahorrando tiempo y recursos en tus procesos diarios."
+    },
+    "centralita-virtual-con-ia": {
+      "title": "Centralita Virtual con IA",
+      "description": "Gestión inteligente de llamadas y reservas con IA.",
+      "content": "Sistema avanzado de atención telefónica que utiliza inteligencia artificial para gestionar llamadas, realizar reservas y proporcionar información las 24 horas, mejorando la experiencia del cliente."
+    },
+    "generacion-videos-ia": {
+      "title": "Generación de Videos con IA",
+      "description": "Crea contenido video profesional con inteligencia artificial.",
+      "content": "Producción de videos de alta calidad utilizando las últimas tecnologías de inteligencia artificial, ideales para marketing, formación y comunicación corporativa."
+    },
+    "logos-imagenes-ia": {
+      "title": "Logos e Imágenes con IA",
+      "description": "Diseño gráfico profesional potenciado por IA.",
+      "content": "Crea logos e imágenes únicos usando tecnología de inteligencia artificial avanzada, perfectos para destacar tu marca en el mercado."
+    },
+    "personajes-virtuales": {
+      "title": "Personajes Virtuales para Instagram",
+      "description": "Crea influencers virtuales únicos con IA.",
+      "content": "Desarrollamos personajes virtuales fotorrealistas personalizados que destacan en redes sociales, ideales para campañas de marketing innovadoras."
+    },
+    "paginas-web-pro": {
+      "title": "Páginas Web PRO en 24h",
+      "description": "Desarrollo web profesional con IA y hosting gratuito.",
+      "content": "Creación de páginas web profesionales en tiempo récord, utilizando inteligencia artificial para el diseño, contenido y optimización SEO, incluyendo hosting gratuito."
+    }
+  }
+}
