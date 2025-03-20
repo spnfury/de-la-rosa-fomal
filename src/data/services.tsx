@@ -29,7 +29,7 @@ const services: Service[] = [
     title: 'Centralita Virtual con IA',
     shortDescription: 'Gestión inteligente de llamadas y reservas con IA.',
     longDescription: 'Sistema avanzado de atención telefónica que utiliza IA para gestionar llamadas, realizar reservas y proporcionar información las 24/7, mejorando la experiencia del cliente.',
-    videoUrl: 'https://www.youtube.com/embed/e-IvA-GA-q4?si=wAUhNYm2LiDojj41',
+    videoUrl: 'https://www.youtube.com/embed/zPVZM6Jq2hg',
     features: [
       'Atención 24/7',
       'Gestión automática de reservas',
