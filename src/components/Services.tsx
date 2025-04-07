@@ -32,36 +32,36 @@ export default function Services() {
   }, []);
 
   return (
-    <section ref={servicesRef} id="services" className="py-20 bg-blue-50 dark:bg-blue-900">
-      <div className="container mx-auto px-4">
-        <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">
+    <section ref={servicesRef} id="services" className="py-16 md:py-20 bg-blue-50 dark:bg-blue-900">
+      <div className="container mx-auto px-6 md:px-8">
+        <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">
             Nuestros Servicios
           </h2>
-          <h3 className="text-xl text-gray-600 dark:text-gray-300">
+          <h3 className="text-lg md:text-xl text-gray-600 dark:text-gray-300">
             Soluciones innovadoras para transformar y potenciar tu negocio
           </h3>
         </div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service) => (
             <article
               key={service.id}
-              className="service-card p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 hover:shadow-2xl transition-all group cursor-pointer transform hover:-translate-y-2"
+              className="service-card p-6 md:p-8 rounded-2xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl hover:shadow-2xl transition-all group cursor-pointer transform hover:-translate-y-2"
               onClick={() => navigate(`/servicio/${service.id}`)}
             >
               <div className="mb-6 text-violet-500 group-hover:scale-110 transition-transform duration-500">
                 {service.icon}
               </div>
-              <h4 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">
+              <h4 className="text-xl md:text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">
                 {service.title}
               </h4>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
+              <p className="text-gray-600 dark:text-gray-300 mb-6 text-base">
                 {service.shortDescription}
               </p>
               <div className="flex items-center text-violet-500 hover:text-violet-600 dark:text-violet-400 dark:hover:text-violet-300 font-medium group">
                 Ver más detalles
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
               </div>
             </article>
           ))}

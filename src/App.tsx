@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
@@ -22,6 +22,9 @@ function App() {
     <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+          <Helmet>
+            <script defer data-domain="sergiodelarosa.online" src="https://plausible.miprimermvp.com/js/script.js"></script>
+          </Helmet>
           <Header />
           <main>
             <Routes>

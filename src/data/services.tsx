@@ -57,7 +57,7 @@ const services: Service[] = [
     title: 'Automatizaciones con Make',
     shortDescription: 'Optimiza tus procesos empresariales con automatizaciones inteligentes.',
     longDescription: 'Implementamos soluciones de automatización personalizadas utilizando Make (anteriormente Integromat) para conectar tus aplicaciones y automatizar flujos de trabajo complejos, ahorrando tiempo y recursos.',
-    videoUrl: 'https://www.instagram.com/p/DHnWpxEI1T3/',
+    videoUrl: 'https://www.instagram.com/p/DHnWpxEI1T3/embed/',
     features: [
       'Integración con más de 1000 aplicaciones',
       'Flujos de trabajo personalizados',

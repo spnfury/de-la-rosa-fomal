@@ -30,19 +30,19 @@ export default function Presentation() {
   return (
     <section
       ref={sectionRef}
-      className="pt-32 pb-16 md:pt-40 md:pb-24 bg-white dark:bg-gray-900"
+      className="pt-28 pb-6 md:pt-32 md:pb-8 bg-white dark:bg-gray-900"
     >
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-3xl mx-auto text-center space-y-4">
           <h1
             ref={titleRef}
-            className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400"
+            className="text-3xl md:text-5xl font-bold mb-3 leading-normal md:leading-relaxed bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400"
           >
             Consultoría de Negocios con IA
           </h1>
           <h2
             ref={subtitleRef}
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300"
+            className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto"
           >
             Transformo tu negocio implementando soluciones de Inteligencia Artificial personalizadas. 
             Desde automatización de procesos hasta análisis predictivo, te ayudo a aprovechar el poder de la IA 

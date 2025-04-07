@@ -65,23 +65,23 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="pt-32 pb-24 md:pt-40 md:pb-32 bg-white dark:bg-gray-900 overflow-hidden"
+      className="pt-4 pb-12 md:pt-6 md:pb-16 bg-white dark:bg-gray-900 overflow-hidden"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center">
           {/* Controles de slider */}
-          <div className="flex justify-between w-full max-w-7xl mb-8">
+          <div className="flex justify-between w-full max-w-6xl mb-4">
             <button
               onClick={goToPrevSlide}
-              className="flex items-center gap-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 p-3 rounded-full transition-colors"
+              className="flex items-center gap-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 p-2 rounded-full transition-colors"
             >
-              <ArrowLeft className="w-5 h-5" />
+              <ArrowLeft className="w-4 h-4" />
             </button>
             <button
               onClick={goToNextSlide}
-              className="flex items-center gap-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 p-3 rounded-full transition-colors"
+              className="flex items-center gap-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 p-2 rounded-full transition-colors"
             >
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
