@@ -1,49 +1,30 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { services } from '../data/services';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { services } from '../data/services';
 
 export default function Services() {
   const navigate = useNavigate();
-  const servicesRef = useRef<HTMLElement>(null);
-  const titleRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef(null);
+  const titleRef = useRef(null);
+  const cardsRef = useRef(null);
 
-  useEffect(() => {
-    if (!servicesRef.current) return;
-
+  React.useEffect(() => {
     const ctx = gsap.context(() => {
-      if (titleRef.current) {
-        gsap.from(titleRef.current, {
-          y: 50,
-          opacity: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top bottom-=100",
-            toggleActions: "play none none reverse"
-          }
-        });
-      }
+      gsap.from(titleRef.current, {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        ease: "power4.out"
+      });
 
-      const cards = document.querySelectorAll('.service-card');
-      cards.forEach((card, index) => {
-        gsap.from(card, {
-          y: 100,
-          opacity: 0,
-          duration: 0.8,
-          delay: index * 0.2,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=100",
-            toggleActions: "play none none reverse"
-          }
-        });
+      gsap.from(cardsRef.current, {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.3,
+        ease: "power4.out"
       });
     }, servicesRef);
 
@@ -55,10 +36,10 @@ export default function Services() {
       <div className="container mx-auto px-4">
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">
-            Servicios Premium de IA
+            Nuestros Servicios
           </h2>
           <h3 className="text-xl text-gray-600 dark:text-gray-300">
-            Soluciones innovadoras de inteligencia artificial para transformar y potenciar tu negocio
+            Soluciones innovadoras para transformar y potenciar tu negocio
           </h3>
         </div>
 

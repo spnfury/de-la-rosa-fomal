@@ -1,22 +1,26 @@
 import React, { useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { services } from '../data/services';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Helmet } from 'react-helmet-async';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ServiceDetail() {
-  const { serviceId } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
-  const service = services.find(s => s.id === serviceId);
+  const service = services.find(s => s.id === id);
   
   const contentRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Scroll al top cuando se carga la página
+    window.scrollTo(0, 0);
+
     if (!service) {
       navigate('/');
       return;
@@ -45,74 +49,89 @@ export default function ServiceDetail() {
   if (!service) return null;
 
   return (
-    <div className="pt-20">
-      <div ref={headerRef} className="bg-gradient-to-br from-violet-600 to-fuchsia-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <button 
-            onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Volver a servicios
-          </button>
-          <div className="flex items-center gap-6 mb-6">
-            <div className="text-white/90 w-16 h-16">
-              {service.icon}
-            </div>
-            <h1 className="text-5xl font-bold">{service.title}</h1>
-          </div>
-          <p className="text-xl text-white/90 max-w-2xl">
-            {service.shortDescription}
-          </p>
-        </div>
-      </div>
+    <>
+      <Helmet>
+        <title>{service.title} | Sergio de la Rosa</title>
+        <meta name="description" content={service.shortDescription} />
+        <meta name="keywords" content={`${service.title}, automatización, consultoría digital, Sergio de la Rosa, ${service.features.join(', ')}`} />
+        <meta property="og:title" content={`${service.title} | Sergio de la Rosa`} />
+        <meta property="og:description" content={service.shortDescription} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://sergiodelarosa.com/servicio/${service.id}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${service.title} | Sergio de la Rosa`} />
+        <meta name="twitter:description" content={service.shortDescription} />
+      </Helmet>
 
-      <div ref={contentRef} className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-2 gap-16">
-          <div className="prose dark:prose-invert max-w-none">
-            <div className="aspect-video w-full mb-8">
-              <iframe
-                src={service.videoUrl}
-                className="w-full h-full rounded-xl"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            <p className="text-lg mb-8">{service.longDescription}</p>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Características</h3>
-                <ul className="space-y-2">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-violet-500" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+      <div className="min-h-screen pt-20">
+        <div ref={headerRef} className="bg-gradient-to-br from-violet-600 to-fuchsia-600 text-white py-20">
+          <div className="container mx-auto px-4">
+            <button 
+              onClick={() => navigate('/')}
+              className="flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              Volver a servicios
+            </button>
+            <div className="flex items-center gap-6 mb-6">
+              <div className="text-white/90 w-16 h-16">
+                {service.icon}
               </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Beneficios</h3>
-                <ul className="space-y-2">
-                  {service.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-500" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h1 className="text-5xl font-bold">{service.title}</h1>
             </div>
-          </div>
-
-          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-6">¿Interesado en este servicio?</h3>
-            <ContactForm serviceId={service.id} />
+            <p className="text-xl text-white/90 max-w-2xl">
+              {service.shortDescription}
+            </p>
           </div>
         </div>
+
+        <div ref={contentRef} className="container mx-auto px-4 py-16">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div className="prose dark:prose-invert max-w-none">
+              <div className="aspect-video w-full mb-8">
+                <iframe
+                  src={service.videoUrl}
+                  className="w-full h-full rounded-xl"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <p className="text-lg mb-8">{service.longDescription}</p>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Características</h3>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-violet-500" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Beneficios</h3>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-500" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
+              <h3 className="text-2xl font-bold mb-6">¿Interesado en este servicio?</h3>
+              <ContactForm serviceId={service.id} />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

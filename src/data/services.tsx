@@ -1,28 +1,8 @@
 import React from 'react';
-import { Workflow, Phone, Video, Image, Users, Globe } from 'lucide-react';
+import { Workflow, Phone, Video, Image, Users, Globe, ShoppingCart } from 'lucide-react';
 import type { Service } from '../types';
 
 const services: Service[] = [
-  {
-    id: 'automatizaciones',
-    icon: <Workflow className="w-12 h-12" />,
-    title: 'Automatizaciones con Make',
-    shortDescription: 'Optimiza tus procesos empresariales con automatizaciones inteligentes.',
-    longDescription: 'Implementamos soluciones de automatización personalizadas utilizando Make (anteriormente Integromat) para conectar tus aplicaciones y automatizar flujos de trabajo complejos, ahorrando tiempo y recursos.',
-    videoUrl: 'https://www.youtube.com/embed/your-video-id',
-    features: [
-      'Integración con más de 1000 aplicaciones',
-      'Flujos de trabajo personalizados',
-      'Automatización de tareas repetitivas',
-      'Sincronización de datos en tiempo real'
-    ],
-    benefits: [
-      'Ahorra hasta 40 horas mensuales por proceso automatizado',
-      'Reduce errores humanos',
-      'Mejora la eficiencia operativa',
-      'Escalabilidad inmediata'
-    ]
-  },
   {
     id: 'centralita-virtual-con-ia',
     icon: <Phone className="w-12 h-12" />,
@@ -41,6 +21,54 @@ const services: Service[] = [
       'Mejora en la satisfacción del cliente',
       'Sin tiempos de espera',
       'Escalabilidad instantánea'
+    ]
+  },
+  {
+    id: 'ecommerce-ia',
+    icon: <ShoppingCart className="w-12 h-12" />,
+    title: 'Ecommerce con IA',
+    shortDescription: 'Tiendas online inteligentes con IA para maximizar tus ventas.',
+    longDescription: 'Desarrollo de tiendas online avanzadas con integración de IA para personalización, recomendaciones y optimización de conversiones. Incluye pasarelas de pago, gestión de inventario y análisis predictivo.',
+    videoUrl: 'https://www.youtube.com/embed/your-video-id',
+    features: [
+      'Diseño personalizado con IA',
+      'Recomendaciones inteligentes',
+      'Optimización de conversiones',
+      'Gestión de inventario automática',
+      'Pasarelas de pago integradas',
+      'Análisis predictivo de ventas',
+      'Chatbot de atención al cliente',
+      'SEO avanzado'
+    ],
+    benefits: [
+      'Aumento de conversiones',
+      'Experiencia de usuario personalizada',
+      'Gestión eficiente del inventario',
+      'Reducción de carritos abandonados',
+      'Mejor posicionamiento en buscadores',
+      'Atención al cliente 24/7',
+      'Escalabilidad garantizada',
+      'Integración con múltiples plataformas'
+    ]
+  },
+  {
+    id: 'automatizaciones',
+    icon: <Workflow className="w-12 h-12" />,
+    title: 'Automatizaciones con Make',
+    shortDescription: 'Optimiza tus procesos empresariales con automatizaciones inteligentes.',
+    longDescription: 'Implementamos soluciones de automatización personalizadas utilizando Make (anteriormente Integromat) para conectar tus aplicaciones y automatizar flujos de trabajo complejos, ahorrando tiempo y recursos.',
+    videoUrl: 'https://www.instagram.com/p/DHnWpxEI1T3/',
+    features: [
+      'Integración con más de 1000 aplicaciones',
+      'Flujos de trabajo personalizados',
+      'Automatización de tareas repetitivas',
+      'Sincronización de datos en tiempo real'
+    ],
+    benefits: [
+      'Ahorra hasta 40 horas mensuales por proceso automatizado',
+      'Reduce errores humanos',
+      'Mejora la eficiencia operativa',
+      'Escalabilidad inmediata'
     ]
   },
   {

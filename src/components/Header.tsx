@@ -1,88 +1,149 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
-import SocialLinks from './SocialLinks';
+import React, { useEffect, useRef, useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import gsap from 'gsap';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const headerRef = useRef(null);
+  const menuRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const currentProgress = (window.scrollY / totalScroll) * 100;
-      setScrollProgress(currentProgress);
-    };
+    const ctx = gsap.context(() => {
+      gsap.from(headerRef.current, {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power4.out"
+      });
+    });
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => ctx.revert();
   }, []);
 
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
+  useEffect(() => {
+    if (isMenuOpen) {
+      gsap.from(menuRef.current, {
+        y: -20,
+        opacity: 0,
+        duration: 0.3,
+        ease: "power4.out"
+      });
+    }
+  }, [isMenuOpen]);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    
+    // Scroll inmediato al principio de la página
+    window.scrollTo(0, 0);
+    
+    // Pequeño delay para asegurar que el scroll al top se complete
+    requestAnimationFrame(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 80, // Ajuste para el header fijo
+          behavior: 'smooth'
+        });
+      }
+    });
+
+    setIsMenuOpen(false);
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-primary/80 backdrop-blur-md">
-      <div className="h-1 bg-gradient-to-r from-primary to-accent" style={{ width: `${scrollProgress}%` }} />
+    <header
+      ref={headerRef}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-primary/80 backdrop-blur-xl shadow-lg"
+    >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <a href="#home" className="flex items-center gap-2">
-            <img src="/logo_header.svg" alt="SR Logo" className="h-8 w-auto" />
-            <span className="font-bold text-lg text-primary dark:text-white">Sergio de la Rosa</span>
-          </a>
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2">
+            <img
+              src="/logo.svg"
+              alt="Sergio de la Rosa"
+              className="w-10 h-10"
+            />
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">
+              Sergio de la Rosa
+            </span>
+          </Link>
 
-          <nav className="hidden md:flex space-x-8">
-            {[
-              ['Inicio', 'home'],
-              ['Servicios', 'services'],
-              ['Sobre Mí', 'about']
-            ].map(([label, id]) => (
-              <a
-                key={id}
-                href={`#${id}`}
-                className="text-primary dark:text-gray-200 hover:text-accent dark:hover:text-accent transition-colors"
-              >
-                {label}
-              </a>
-            ))}
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            <a 
+              href="#services" 
+              onClick={(e) => scrollToSection(e, 'services')}
+              className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+            >
+              Servicios
+            </a>
+            <a 
+              href="#about" 
+              onClick={(e) => scrollToSection(e, 'about')}
+              className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+            >
+              Sobre Mí
+            </a>
+            <a 
+              href="#contact" 
+              onClick={(e) => scrollToSection(e, 'contact')}
+              className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+            >
+              Contacto
+            </a>
           </nav>
 
-          <div className="flex items-center space-x-4">
-            <SocialLinks />
+          {/* Mobile Menu Button */}
+          <div className="flex items-center gap-4 md:hidden">
             <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-primary-light transition-colors"
+              onClick={toggleMenu}
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-primary-light transition-colors"
-            >
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMenuOpen ? (
+                <X className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+              ) : (
+                <Menu className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+              )}
             </button>
           </div>
         </div>
 
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4">
-            {[
-              ['Inicio', 'home'],
-              ['Servicios', 'services'],
-              ['Sobre Mí', 'about']
-            ].map(([label, id]) => (
+          <div
+            ref={menuRef}
+            className="md:hidden py-4 border-t dark:border-gray-800"
+          >
+            <nav className="flex flex-col gap-4">
               <a
-                key={id}
-                href={`#${id}`}
-                className="block py-2 text-primary dark:text-gray-200 hover:text-accent dark:hover:text-accent transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                href="#services"
+                onClick={(e) => scrollToSection(e, 'services')}
+                className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
               >
-                {label}
+                Servicios
               </a>
-            ))}
+              <a
+                href="#about"
+                onClick={(e) => scrollToSection(e, 'about')}
+                className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+              >
+                Sobre Mí
+              </a>
+              <a
+                href="#contact"
+                onClick={(e) => scrollToSection(e, 'contact')}
+                className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+              >
+                Contacto
+              </a>
+            </nav>
           </div>
         )}
       </div>
