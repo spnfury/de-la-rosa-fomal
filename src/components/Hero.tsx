@@ -47,7 +47,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="pt-32 pb-24 md:pt-40 md:pb-32 bg-gray-50 dark:bg-gray-800 overflow-hidden"
+      className="pt-32 pb-24 md:pt-40 md:pb-32 bg-blue-50 dark:bg-blue-900 overflow-hidden"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center">

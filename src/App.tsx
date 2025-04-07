@@ -18,7 +18,8 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+     
+      <div className="min-h-screen bg-blue-50 dark:bg-blue-900 text-gray-900 dark:text-white">
         <Header />
         <main>
           <Routes>

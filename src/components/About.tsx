@@ -53,7 +53,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={aboutRef} id="about" className="py-20 bg-gray-50 dark:bg-gray-800 overflow-hidden">
+    <section ref={aboutRef} id="about" className="py-20 bg-blue-50 dark:bg-blue-900 overflow-hidden">
       <div className="container mx-auto px-4">
         <div ref={contentRef} className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">

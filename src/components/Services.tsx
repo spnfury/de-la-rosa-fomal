@@ -51,7 +51,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section ref={servicesRef} id="services" className="py-20 bg-white dark:bg-gray-900">
+    <section ref={servicesRef} id="services" className="py-20 bg-blue-50 dark:bg-blue-900">
       <div className="container mx-auto px-4">
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400">
