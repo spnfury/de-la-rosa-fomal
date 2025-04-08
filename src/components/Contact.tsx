@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import StandardContactForm from './StandardContactForm';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,6 +10,7 @@ export default function Contact() {
   const contactRef = useRef(null);
   const titleRef = useRef(null);
   const infoRef = useRef(null);
+  const formRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -36,6 +38,18 @@ export default function Contact() {
           toggleActions: "play none none reverse"
         }
       });
+      
+      // Animación del formulario
+      gsap.from(formRef.current, {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: formRef.current,
+          start: "top bottom-=100",
+          toggleActions: "play none none reverse"
+        }
+      });
     }, contactRef);
 
     return () => ctx.revert();
@@ -53,7 +67,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           <div ref={infoRef} className="space-y-8">
             <div className="flex items-start space-x-6 group">
               <div className="p-4 bg-violet-50 dark:bg-gray-800 rounded-2xl group-hover:scale-110 transition-transform duration-300">
@@ -74,6 +88,15 @@ export default function Contact() {
                 <p className="text-lg text-gray-600 dark:text-gray-300">+34 666 532 143</p>
               </div>
             </div>
+          </div>
+          
+          <div ref={formRef}>
+            <StandardContactForm 
+              title="Envíame un mensaje"
+              subtitle="Completa el formulario y me pondré en contacto contigo lo antes posible."
+              buttonText="Enviar consulta"
+              successMessage="¡Gracias por tu mensaje! Te responderé a la mayor brevedad posible."
+            />
           </div>
         </div>
       </div>
