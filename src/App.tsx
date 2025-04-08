@@ -33,6 +33,8 @@ function App() {
             </Routes>
           </main>
           <footer className="py-8 bg-gray-50 dark:bg-gray-800">
+          ads
+asdasdadsdsa
             <div className="container mx-auto px-4 text-center text-gray-600 dark:text-gray-300">
               <p>&copy; {new Date().getFullYear()} Sergio de la Rosa. Todos los derechos reservados.</p>
             </div>
