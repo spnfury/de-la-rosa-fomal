@@ -3,50 +3,101 @@
   <!-- Homepage -->
   <url>
     <loc>https://sergiodelarosa.online/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2024-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Acerca de -->
+  
+  <!-- Home Sections -->
   <url>
-    <loc>https://sergiodelarosa.online/acerca-de</loc>
-    <lastmod>2023-10-24</lastmod>
+    <loc>https://sergiodelarosa.online/#presentacion</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sergiodelarosa.online/#about</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sergiodelarosa.online/#servicios</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sergiodelarosa.online/#clientes</loc>
+    <lastmod>2024-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Servicios (Listado) -->
+  
   <url>
-    <loc>https://sergiodelarosa.online/servicios</loc>
-    <lastmod>2023-10-24</lastmod>
+    <loc>https://sergiodelarosa.online/#contacto</loc>
+    <lastmod>2024-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Servicio Detalle - Service 1 -->
+  
   <url>
-    <loc>https://sergiodelarosa.online/servicio/service-1</loc>
-    <lastmod>2023-10-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Servicio Detalle - Service 2 -->
-  <url>
-    <loc>https://sergiodelarosa.online/servicio/service-2</loc>
-    <lastmod>2023-10-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Servicio Detalle - Service 3 -->
-  <url>
-    <loc>https://sergiodelarosa.online/servicio/service-3</loc>
-    <lastmod>2023-10-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Contacto -->
-  <url>
-    <loc>https://sergiodelarosa.online/contacto</loc>
-    <lastmod>2023-10-24</lastmod>
+    <loc>https://sergiodelarosa.online/#empresas</loc>
+    <lastmod>2024-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  
+  <!-- Servicios Detallados -->
+  <url>
+    <loc>https://sergiodelarosa.online/servicio/centralita-virtual-con-ia</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sergiodelarosa.online/servicio/ecommerce-ia</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sergiodelarosa.online/servicio/automatizaciones</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sergiodelarosa.online/servicio/generacion-videos-ia</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sergiodelarosa.online/servicio/logos-imagenes-ia</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sergiodelarosa.online/servicio/personajes-virtuales</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sergiodelarosa.online/servicio/paginas-web-pro</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
