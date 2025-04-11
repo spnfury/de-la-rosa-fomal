@@ -51,6 +51,14 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- Páginas Independientes -->
+  <url>
+    <loc>https://sergiodelarosa.online/contacto-rapido</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Servicios Detallados -->
   <url>
     <loc>https://sergiodelarosa.online/servicio/centralita-virtual-con-ia</loc>

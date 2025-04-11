@@ -4,6 +4,7 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
+import QuickContact from './pages/QuickContact';
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/servicio/:id" element={<ServiceDetail />} />
+              <Route path="/contacto-rapido" element={<QuickContact />} />
             </Routes>
           </main>
           <footer className="py-8 bg-gray-50 dark:bg-gray-800">
