@@ -54,7 +54,7 @@ const services: Service[] = [
   {
     id: 'automatizaciones',
     icon: <Workflow className="w-12 h-12" />,
-    title: 'Automatizaciones con Make',
+    title: 'Automatizaciones con Make & N8N',
     shortDescription: 'Optimiza tus procesos empresariales con automatizaciones inteligentes.',
     longDescription: 'Implementamos soluciones de automatización personalizadas utilizando Make (anteriormente Integromat) para conectar tus aplicaciones y automatizar flujos de trabajo complejos, ahorrando tiempo y recursos.',
     videoUrl: 'https://www.instagram.com/p/DHnWpxEI1T3/embed/',
