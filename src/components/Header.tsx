@@ -92,6 +92,13 @@ export default function Header() {
               Sobre Mí
             </a>
             <a 
+              href="#mis-empresas" 
+              onClick={(e) => scrollToSection(e, 'mis-empresas')}
+              className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+            >
+              Mis Empresas
+            </a>
+            <a 
               href="#contact" 
               onClick={(e) => scrollToSection(e, 'contact')}
               className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
@@ -135,6 +142,13 @@ export default function Header() {
                 className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
               >
                 Sobre Mí
+              </a>
+              <a
+                href="#mis-empresas"
+                onClick={(e) => scrollToSection(e, 'mis-empresas')}
+                className="text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+              >
+                Mis Empresas
               </a>
               <a
                 href="#contact"
