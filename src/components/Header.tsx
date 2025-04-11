@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
+import SocialLinks from './SocialLinks';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -105,6 +106,9 @@ export default function Header() {
             >
               Contacto
             </a>
+            <div className="pl-4 border-l border-gray-300 dark:border-gray-700">
+              <SocialLinks />
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -157,6 +161,9 @@ export default function Header() {
               >
                 Contacto
               </a>
+              <div className="pt-4 mt-2 border-t border-gray-200 dark:border-gray-700">
+                <SocialLinks />
+              </div>
             </nav>
           </div>
         )}
