@@ -6,7 +6,7 @@ const services: Service[] = [
   {
     id: 'centralita-virtual-con-ia',
     icon: <Phone className="w-12 h-12" />,
-    title: 'Centralita Virtual con IA',
+    title: 'Agentes con IA',
     shortDescription: 'Gestión inteligente de llamadas y reservas con IA.',
     longDescription: 'Sistema avanzado de atención telefónica que utiliza IA para gestionar llamadas, realizar reservas y proporcionar información las 24/7, mejorando la experiencia del cliente.',
     videoUrl: 'https://www.youtube.com/embed/zPVZM6Jq2hg',
@@ -29,7 +29,7 @@ const services: Service[] = [
     title: 'Ecommerce con IA',
     shortDescription: 'Tiendas online inteligentes con IA para maximizar tus ventas.',
     longDescription: 'Desarrollo de tiendas online avanzadas con integración de IA para personalización, recomendaciones y optimización de conversiones. Incluye pasarelas de pago, gestión de inventario y análisis predictivo.',
-    videoUrl: 'https://www.youtube.com/embed/your-video-id',
+    videoUrl: 'https://www.instagram.com/p/DIGnZkgoNnt/embed/',
     features: [
       'Diseño personalizado con IA',
       'Recomendaciones inteligentes',
@@ -77,7 +77,7 @@ const services: Service[] = [
     title: 'Generación de Videos con IA',
     shortDescription: 'Crea contenido video profesional con inteligencia artificial.',
     longDescription: 'Producción de videos de alta calidad utilizando las últimas tecnologías de IA, perfectos para marketing, formación o comunicación corporativa.',
-    videoUrl: 'https://www.youtube.com/embed/your-video-id',
+    videoUrl: 'https://www.instagram.com/p/DHjfjkwIvNM/embed/',
     features: [
       'Videos personalizados',
       'Múltiples estilos y formatos',
@@ -97,7 +97,7 @@ const services: Service[] = [
     title: 'Logos e Imágenes con IA',
     shortDescription: 'Diseño gráfico profesional potenciado por IA.',
     longDescription: 'Creación de logos, imágenes y elementos gráficos únicos utilizando tecnología de IA avanzada para tu marca.',
-    videoUrl: 'https://www.youtube.com/embed/your-video-id',
+    videoUrl: 'https://www.instagram.com/p/DH_biP7IvGg/embed/',
     features: [
       'Diseños únicos y personalizados',
       'Múltiples variaciones',
@@ -117,7 +117,10 @@ const services: Service[] = [
     title: 'Personajes Virtuales para Instagram',
     shortDescription: 'Crea influencers virtuales únicos con IA.',
     longDescription: 'Desarrollo de personajes virtuales fotorrealistas para marketing en redes sociales, completamente personalizados para tu marca.',
-    videoUrl: 'https://www.youtube.com/embed/your-video-id',
+    videoUrl: 'https://www.instagram.com/p/DIGnZkgoNnt/embed/',
+
+    
+    
     features: [
       'Personajes personalizados',
       'Contenido regular',
@@ -134,10 +137,10 @@ const services: Service[] = [
   {
     id: 'paginas-web-pro',
     icon: <Globe className="w-12 h-12" />,
-    title: 'Páginas Web PRO en 24h',
+    title: 'Apps & Páginas Web PRO en 24h',
     shortDescription: 'Desarrollo web profesional con IA + Hosting gratuito y SEO optimizado.',
     longDescription: 'Creación de páginas web profesionales en tiempo récord utilizando IA para diseño, contenido y optimización SEO. Incluye hosting gratuito y configuración completa.',
-    videoUrl: 'https://www.youtube.com/embed/your-video-id',
+    videoUrl: 'https://www.instagram.com/p/DIOJKc_oQP5/embed/',
     features: [
       'Diseño personalizado con IA',
       'Optimización SEO incluida',
