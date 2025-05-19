@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Header from '../src/components/Header';
 import '../src/index.css';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [updatedAt, setUpdatedAt] = useState(new Date());
@@ -17,6 +18,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <script 
+          src="https://widgets.leadconnectorhq.com/loader.js"  
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+          data-widget-id="682af2cfe4bd840b522b42c0"   
+        />
+      </Head>
       <Header />
       <Component {...pageProps} />
       <footer className="py-8 bg-gray-50 dark:bg-gray-800">
